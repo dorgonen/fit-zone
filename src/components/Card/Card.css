@@ -1,0 +1,18 @@
+.card-container{
+    width: 370px;
+    height: 427px;
+    /* margin-left: 30px; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    color:black
+}
+
+.card-img-container{
+    width: 100%;
+    height: 270px;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
