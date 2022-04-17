@@ -5,16 +5,16 @@
   /* background-color: var(--dark-background); */
   /* background-image: linear-gradient(to bottom, #1f1d2b, #201e2c, #211f2d, #22202e, #23212f, #252331, #262432, #282634, #2b2937, #2e2c3a, #32303d, #353340);  margin-bottom: 40px; */
   /* background-image: linear-gradient(to bottom, #212221, #262726, #2a2d2b, #2f3230, #333836, #373d3b, #3b4340, #3f4846, #434e4c, #475453, #4c5b5a, #506161); */
-  background-image: url('../../../../public/images/bgpic.jpg');
+  background-image: url("../../../../public/images/bgpic.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height:100vh;
+  height: 100vh;
   background-position: center;
   background-color: #08090b;
 }
 
 .dark {
-  color: var(--dark-color)
+  color: var(--dark-color);
 }
 
 .home__hero-row {
@@ -52,6 +52,39 @@
   font-weight: 600;
 }
 
+.main-section-middle-heading {
+  color: var(--primary);
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 
 .main-section-subtitle {
   max-width: 440px;
@@ -66,8 +99,8 @@
   max-height: 555px;
 }
 
-.img-wrap{
-  display:flex;
+.img-wrap {
+  display: flex;
   justify-content: center;
 }
 .main-section-img {
@@ -87,9 +120,10 @@ img {
 }
 
 @media screen and (max-width: 991px) {
-  .main-section{
+  .main-section {
     background-position: bottom;
     background-color: #08090b;
+    background-size: 230%;
   }
 
   .container {
@@ -98,27 +132,25 @@ img {
   }
 
   .main-section-heading {
-  text-align: center;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.8rem;
   }
 
   .main-section-subtitle {
     text-align: center;
+    margin-bottom: 80px;
+    color: #d3d3d3;
   }
 
-  .btn{
+  .btn {
     width: 75%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .general-container-light:after {
-    width: calc(185% + 1.3px);
-  }
-
-
   .col {
     max-width: 100%;
     flex-basis: 100%;
   }
-
 }
