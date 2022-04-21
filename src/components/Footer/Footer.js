@@ -16,25 +16,18 @@ import { footerData } from './Data'
 function Footer() {
   return (
     <div className='footer-container'>
-      {/* <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Join our exclusive membership to receive the latest news and trends
-        </p>
+      <div className='footer-subscription'>
+        {/* <p className='footer-subscription-heading'>
+        צרו איתנו קשר ונגנוב לכם את הכסף
+        </p> */}
         <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
+          צרו איתנו קשר ונגנוב לכם את הכסף
         </p>
-        <div className='input-areas'>
-          <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
-            />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
-          </form>
+        <div className='footer-subscription-buttons'>
+          <Button buttonColor='white'>צרו קשר</Button>
+          <Button buttonStyle='btn--outline'>מי אנחנו</Button>
         </div>
-      </section> */}
+      </div>
       <div className='footer-links'>
         {footerData.map((column, columnIndex) =>
           <div key={columnIndex} className='footer-link-wrapper'>

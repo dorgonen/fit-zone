@@ -25,7 +25,7 @@ export const footerData = [
           link: '/'
         },
         {
-          label: "תמונות",
+          label: "גלריית תמונות",
           link: '/'
         },
       ]

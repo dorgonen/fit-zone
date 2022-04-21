@@ -1,7 +1,7 @@
 .home__hero-section {
-  background-color: var(--light-background);
+  background-color: var(--secondary);
   color: #fff;
-  padding: 40px 0;
+  padding: 3rem 0;
 }
 
 .home__hero-row {
@@ -74,7 +74,7 @@
 }
 
 .home__hero-img-wrapper {
-  max-width: 300px;
+  max-width: 555px;
 }
 
 .home__hero-img {
@@ -123,5 +123,10 @@ img {
 
   .home__hero-subtitle{
     font-size: 16px;
+  }
+
+  .home__hero-row{
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

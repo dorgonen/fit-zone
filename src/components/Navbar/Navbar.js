@@ -62,7 +62,7 @@ function Navbar({ isScrolled }) {
             <li className="nav-item">
               <Link
                 to="/services"
-                className="nav-links"
+                className="nav-links hover-underline-animation"
                 onClick={closeMobileMenu}
               >
                 התאמת אופניים
@@ -71,7 +71,7 @@ function Navbar({ isScrolled }) {
             <li className="nav-item">
               <Link
                 to="/products"
-                className="nav-links"
+                className="nav-links hover-underline-animation"
                 onClick={closeMobileMenu}
               >
                 סנדאת תיקונים
@@ -80,7 +80,7 @@ function Navbar({ isScrolled }) {
             <li className="nav-item">
               <Link
                 to="/products"
-                className="nav-links"
+                className="nav-links hover-underline-animation"
                 onClick={closeMobileMenu}
               >
                 חוגי רכיבה
@@ -89,7 +89,7 @@ function Navbar({ isScrolled }) {
             <li className="nav-item">
               <Link
                 to="/products"
-                className="nav-links"
+                className="nav-links hover-underline-animation"
                 onClick={closeMobileMenu}
               >
                 מאמרים וכתבות
@@ -98,10 +98,19 @@ function Navbar({ isScrolled }) {
             <li className="nav-item">
               <Link
                 to="/gallery"
-                className="nav-links"
+                className="nav-links hover-underline-animation"
                 onClick={closeMobileMenu}
               >
-                תמונות
+                גלריית תמונות
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/contact"
+                className="nav-links hover-underline-animation"
+                onClick={closeMobileMenu}
+              >
+                צרו קשר
               </Link>
             </li>
           </ul>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Home from "./pages/HomePage/Home";
+import Contact from "./pages/Contact/Contact";
+
 // import Services from './components/pages/Services/Services';
 // import Products from './components/pages/Products/Products';
 // import SignUp from './components/pages/SignUp/SignUp';
@@ -50,10 +52,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/gallery" component={PhotoGalleryPage} />
-        {
-          // <Route path="/products" component={Products} />
-          // <Route path="/sign-up" component={SignUp} />
-        }
+        <Route path="/contact" component={Contact} />
       </Switch>
       <Footer />
     </Router>

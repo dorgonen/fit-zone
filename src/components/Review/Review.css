@@ -1,10 +1,12 @@
 
+  .swiper-slide img > .review-container{
+    width: none;
+  }
   .review-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background: var(--dark-background); */
     background-color: #ffff;
     border-radius: 0.25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -19,7 +21,13 @@
   }
   
   .avatar {
-    display: flex;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    top: -40px;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -33,7 +41,7 @@
     border-radius: 1000px;
     border: 4px solid white;
     transform: scale(0.2);
-    color: #fff
+    color: #fff */
   }
   
   .avatar-pop {
@@ -60,5 +68,5 @@
   }
 
   .star{
-    color:#e10514;
+    color:var(--primary);
   }

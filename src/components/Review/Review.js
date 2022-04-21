@@ -25,9 +25,10 @@ export default function Review({ text, author, stars, avatar }) {
 
     return (
         <div className="review-container">
-            <div className={["avatar", "avatar-pop"].join(" ")}>
+            {/* <div className={["avatar", "avatar-pop"].join(" ")}>
                 <i className="fa-solid fa-quote-right" > </i>
-            </div>
+            </div> */}
+            <img src={avatar} alt="Avatar" className="avatar"></img>
             <div className="review-main-content" >
                 {text}
             </div>

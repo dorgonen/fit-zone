@@ -1,5 +1,6 @@
 :root {
-  --primary: #e10514;
+  --primary: #dd0707;
+  /* e10514 */
 }
 
 .btn {
@@ -59,7 +60,7 @@
 .btn--mobile:hover {
   transition: all 0.3s ease-out;
   background: #fff;
-  color: #242424;
+  color: #ea1d22;
 }
 
 .btn--wide:hover {
@@ -82,6 +83,16 @@
   background-color: #123052;
   color: #fff;
   border: none;
+}
+
+.white {
+  background-color: #ffffff;
+  color: #ea1d22;
+  border: none;
+}
+
+.white:hover {
+  color: #ea1d22;
 }
 
 .red {

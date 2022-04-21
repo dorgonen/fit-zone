@@ -1,10 +1,6 @@
 .main-section {
   color: #fff;
   padding: 40px 0 0;
-  /* padding-top: 25%; */
-  /* background-color: var(--dark-background); */
-  /* background-image: linear-gradient(to bottom, #1f1d2b, #201e2c, #211f2d, #22202e, #23212f, #252331, #262432, #282634, #2b2937, #2e2c3a, #32303d, #353340);  margin-bottom: 40px; */
-  /* background-image: linear-gradient(to bottom, #212221, #262726, #2a2d2b, #2f3230, #333836, #373d3b, #3b4340, #3f4846, #434e4c, #475453, #4c5b5a, #506161); */
   background-image: url("../../../../public/images/bgpic.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -47,44 +43,27 @@
 
 .main-section-heading {
   margin-bottom: 24px;
-  font-size: 48px;
+  font-size: 2.1em;
   line-height: 1.1;
   font-weight: 600;
+}
+
+.Typewriter__wrapper{
+  font-size: 2.0em;
+  font-weight: 700;
+  color: var(--primary)
+}
+
+.Typewriter__cursor{
+  font-size: 1.8em;
+    color: var(--secondary);
 }
 
 .main-section-middle-heading {
   color: var(--primary);
 }
 
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
 
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
 
 .main-section-subtitle {
   max-width: 440px;
@@ -134,7 +113,11 @@ img {
   .main-section-heading {
     text-align: center;
     margin-top: 50px;
-    font-size: 1.8rem;
+    font-size: 1.6em;
+  }
+
+  .Typewriter__wrapper{
+    font-size: 2em;
   }
 
   .main-section-subtitle {

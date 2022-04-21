@@ -1,14 +1,14 @@
 import Review from "../../components/Review/Review";
+import Section from "../../components/Sections/Section/Section";
 
 export const homeObjOne = {
   lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightText: false,
+  lightTextDesc: false,
   // topLine: 'Exclusive Access',
-  headlineUpper: "שפר את",
+  headlineUpper: "שפרו את",
   headlineMiddle: ["הנוחות", "היעילות", "הביצועים", "הגמישות", "ההנאה"],
-  headlineFooter: "ברכיבה שלך",
-  description: "יעל את הנוחות, הביצועים",
+  headlineFooter: "ברכיבה שלכם",
   buttonLabel: "לתיאום פגישה",
   imgStart: "",
   img: "images/main-pic.png",
@@ -16,17 +16,18 @@ export const homeObjOne = {
 };
 
 export const homeObjTwo = {
-  lightBg: true,
+  lightBg: false,
   lightText: false,
   lightTextDesc: false,
   // topLine: 'מקצועיות היא שם המשחק',
-  headline: "האופניים זקוקות לתיקון?",
+  headline: "סדנאת תיקונים",
   description:
-    "אצלנו תמצאו סדנאת תיקונים המופעלת על ידי מכונאים בעלי עשרות שנות ניסיון. נסו אותנו ונגנוב לכם את הכסף ללא פשרות.",
+    "אצלנו תמצאו סדנאת תיקונים המופעלת על ידי מכונאים בעלי עשרות שנות ניסיון.",
   buttonLabel: "למידע נוסף",
   imgStart: "",
   img: "images/bike-fix-cartoon.png",
   alt: "Repaire",
+  icon: "fa-solid fa-screwdriver-wrench",
 };
 
 export const homeObjThree = {
@@ -34,16 +35,47 @@ export const homeObjThree = {
   lightText: false,
   lightTextDesc: false,
   // topLine: 'EASY SETUP',
-  headline: "רוצים לרכב יחד?",
+  headline: "חוגי רכיבה",
   description:
-    "אנו מפעילים חוגי רכיבה אשר בהם נלווה אתכם מסיבוב הגלגל הראשון ועד שובכם הביתה. בין אם תרצו ובין אם לא נגנוב לכם את הכסף עוד לפני שתשימו לב. רק היום רק מחר ורק כל החודש רק במחסני חשמל.",
+    "אנו מפעילים חוגי רכיבה אשר בהם נלווה אתכם מסיבוב הגלגל הראשון ועד שובכם הביתה.",
   buttonLabel: "התחילו לרכב",
   imgStart: "start",
   img: "images/ride-safe-cartoon.png",
   alt: "Ride",
+  icon: "fa-solid fa-person-chalkboard",
+
 };
 
-export const sliderItems = [
+export const homeObjFour = {
+  lightBg: false,
+  lightText: false,
+  lightTextDesc: false,
+  // topLine: 'EASY SETUP',
+  headline: "התאמת אופניים",
+  description: "אצלנו תוכלו לבצע התאמת אופניים מושלמת בשיטת ריטול המחורטטת. הביא לנו את כספכם ונברח איתו.",
+  buttonLabel: "קבעו התאמה",
+  imgStart: "",
+  img: "images/bike-fit-cartoon.png",
+  alt: "BikeFit",
+  icon: "fa-solid fa-person-biking",
+
+};
+
+export const AboutUs = {
+  lightBg: false,
+  lightText: false,
+  lightTextDesc: false,
+  // topLine: 'FitZone',
+  headline: "מי אנחנו",
+  description:
+    "פיטזון הוא סטודיו מקצועי לרוכב הפועל מאז שנת 1921. ברשותנו צוות מטורף המפעיל מלא ציוד ועושה ארגזים של כסף על חשבונכם.",
+  buttonLabel: "קראו עוד",
+  imgStart: "",
+  img: "images/main-pic-2.png",
+  alt: "BikeFit",
+};
+
+export const reviews = [
   {
     key: "1",
     renderItem: () => {
@@ -52,6 +84,7 @@ export const sliderItems = [
           text="שירות מצויין ומוצר מהמם. תודה רבה לאורן גונן שפשוטו כמשמעו גנב לנו את כל הכסף. תודה"
           author="ישראל ישראלי"
           stars={4.5}
+          avatar="images/img_avatar.png"
         ></Review>
       );
     },
@@ -64,21 +97,77 @@ export const sliderItems = [
           text="ביצעתי התאמת אופניים בסטודיו המקצועי ויצאתי חסר מילים. תודה על מי שאתם ומה שאתם ואיך שאתם וכמה שאתם ולמה שאתם ומתי שאתם ואיך שאתם וכיצד שאתם ומתי שאתם ולמה שאתם. תודה"
           author="שאול שאולי"
           stars={5}
+          avatar="images/img_avatar2.png"
+
         ></Review>
       );
     },
   },
 ];
 
-export const iconsSection = () => {
-  return (
-    <>
-      <i className="fa-solid fa-screwdriver-wrench"></i>
-      <p>abrakadabra</p>
-      <i className="fa-solid fa-ruler-vertical"></i>
-      <p>abrakadabra</p>
-      <i className="fa-solid fa-person-biking"></i>
-      <p>abrakadabra</p>
-    </>
-  );
-};
+export const splitSectionData = {
+  items: [homeObjTwo, homeObjFour, homeObjThree],
+  headline: "השירותים שלנו",
+  bgImg: "images/bicycle-bg-transparent.png"
+}
+
+export const photos = [
+  {
+    renderItem: () => {
+      return (
+        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799"></img>
+      )
+    },
+  },
+  {
+    renderItem: () => {
+      return (
+        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799"></img>
+      )
+    },
+  },
+  {
+    renderItem: () => {
+      return (
+        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799"></img>
+      )
+    },
+  },
+  {
+    renderItem: () => {
+      return (
+        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799"></img>
+      )
+    },
+  },
+  {
+    renderItem: () => {
+      return (
+        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799"></img>
+      )
+    },
+  },
+  {
+    renderItem: () => {
+      return (
+        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799"></img>
+      )
+    },
+  },
+  {
+    renderItem: () => {
+      return (
+        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799"></img>
+      )
+    },
+  },
+  {
+    renderItem: () => {
+      return (
+        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799"></img>
+      )
+    },
+  },
+];
+
+

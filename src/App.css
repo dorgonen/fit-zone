@@ -5,11 +5,11 @@
 }
 
 :root{
+  --primary: #e00b0b;
+  --secondary: #efefef;
   --dark-color : #333333;
-  --light-background: #eeeeee;
-  --dark-background: #fff;
-  /* --light-background: #f4f5f0; */
-  --top-line-color: #123052;
+  /* --dark-background: #fff; */
+  --top-line-color: var(--primary);
 }
 
 .general-container-light:after{
@@ -26,6 +26,14 @@
   display: block;
   width: calc(147% + 1.3px);
   background-color:#ffffff;
+}
+
+.swiper-slide img .review-container{
+  width: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import './Section.css';
 import { Button } from '../../Button/Button';
 import { Link } from 'react-router-dom';
+import { IconButton } from '../../IconButton/IconButton';
 
 function Section({
   lightBg,
@@ -25,7 +26,7 @@ function Section({
             className='row home__hero-row'
             style={{
               display: 'flex',
-              flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'
+              flexDirection: window.innerWidth <= 960 ? '' : imgStart === 'start' ? 'row-reverse' : 'row'
             }}
           >
             <div className='col'>
@@ -44,9 +45,9 @@ function Section({
                   {description}
                 </p>
                 <Link to='/sign-up'>
-                  <Button buttonSize='btn--wide' >
+                  <IconButton buttonSize='btn--wide' >
                     {buttonLabel}
-                  </Button>
+                  </IconButton>
                 </Link>
               </div>
             </div>

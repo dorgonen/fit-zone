@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation"
@@ -12,7 +12,16 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-const Slider = ({ slides, onSlideChange }) => {
+const Slider = ({
+  slides,
+  onSlideChange,
+  pagination,
+  navigation,
+  backgroundColor,
+  className,
+  slidesPerView,
+  spaceBetween
+}) => {
   const swiperRef = useRef(null)
 
   return (
@@ -23,13 +32,15 @@ const Slider = ({ slides, onSlideChange }) => {
       <Swiper
         ref={swiperRef}
         onSlideChange={onSlideChange}
-        // navigation
         autoplay={{ delay: 5000 }}
-        pagination={{ clickable: true }}
+        pagination={pagination ? { clickable: true } : false}
+        navigation={navigation ? true : false}
         speed={1000}
-        spaceBetween={50}
-        slidesPerView={1}
-        className="mySwiper">
+        spaceBetween={spaceBetween ? spaceBetween : 50}
+        slidesPerView={slidesPerView ? slidesPerView : 1}
+        className="mySwiper"
+        style={backgroundColor ? { backgroundColor: backgroundColor } : {}}
+      >
         {slides.map((slide, index) => {
           return (
             <SwiperSlide key={index}>
