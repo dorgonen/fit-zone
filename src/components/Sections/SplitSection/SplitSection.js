@@ -51,17 +51,18 @@ function SplitSection({
                       <p
                         className={
                           item.lightTextDesc
-                            ? 'home__hero-subtitle'
-                            : 'home__hero-subtitle dark'
+                            ? 'split-section-subtitle'
+                            : 'split-section-subtitle dark'
                         }
                       >
                         {item.description}
                       </p>
                     </div>
                     <div className='split-section-btn'>
-                      <RoundButton>
+                    <Button buttonStyle='btn--outline' buttonColor='red'>קראו עוד</Button>
+                      {/* <RoundButton>
                         <i className={item.icon}></i>
-                      </RoundButton>
+                      </RoundButton> */}
                     </div>
                   </div>
                 )

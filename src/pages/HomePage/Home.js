@@ -33,7 +33,7 @@ const Home = ({ isMobile }) => {
       <MainSection {...homeObjOne} />
       <Section {...AboutUs}></Section>
       <SplitSection {...splitSectionData}></SplitSection>
-      <Slider className="photo-gallery-slider" slides={photos} slidesPerView={window.innerWidth <= 960 ? 2 : 4} spaceBetween={20} backgroundColor="white" pagination={true} navigation={false} onSlideChange={handleSlideChange}></Slider>
+      <Slider className="photo-gallery-slider" slides={photos} slidesPerView={window.innerWidth <= 960 ? 1.5 : 4} spaceBetween={20} backgroundColor="white" pagination={true} navigation={false} onSlideChange={handleSlideChange}></Slider>
       <Slider slides={reviews} pagination={false} navigation={true} onSlideChange={handleSlideChange}></Slider>
       {/* <CardsSection items={cardsItems}></CardsSection> */}
     </>

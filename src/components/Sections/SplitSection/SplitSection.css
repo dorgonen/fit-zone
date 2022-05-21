@@ -22,7 +22,7 @@
 .split-section-col {
   flex: 0 0 33.33%;
   max-width: 33.33%;
-  padding: 1rem 4rem 4rem 4rem;
+  padding: 4rem 4rem 4rem 4rem;
 }
 
 .split-section-text {
@@ -98,7 +98,8 @@
 }
 
 .heading {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
+  margin-top: 20px;
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
@@ -113,9 +114,9 @@
   background-color: var(--dark-background);
 }
 
-.home__hero-subtitle {
+.split-section-subtitle {
   max-width: 440px;
-  margin-bottom: 35px;
+  margin-bottom: 0px;
   font-size: 18px;
   line-height: 24px;
   min-height: 120px;
@@ -178,7 +179,7 @@ img {
     font-size: 22px;
   }
 
-  .home__hero-subtitle {
+  .split-section-subtitle {
     font-size: 16px;
     margin-bottom: 20px;
     min-height: auto;
