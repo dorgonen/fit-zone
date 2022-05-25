@@ -5,28 +5,17 @@ import MainSection from "../../components/Sections/MainSection/MainSection";
 
 import {
   AboutUs,
-  homeObjFour,
   homeObjOne,
   reviews,
   splitSectionData,
   photos
 } from "./Data";
 import Slider from "../../components/Slider/Slider";
-import CardsSection from "../../components/Sections/CardsSection/CardsSection";
 import SplitSection from "../../components/Sections/SplitSection/SplitSection";
 // import Review from '../../components/Review/Review';
 
 const Home = ({ isMobile }) => {
   const handleSlideChange = () => { };
-
-  const cardsItems = [
-    {
-      text: "abrakadabra",
-      title: "kukuriku",
-      img: "images/main-pic.png",
-    },
-  ];
-
 
   return (
     <>

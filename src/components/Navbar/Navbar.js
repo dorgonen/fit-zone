@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "../Button/Button";
-// import { MdFingerprint } from 'react-icons/md';
-// import { FaBars, FaTimes } from 'react-icons/fa';
-// import { IconContext } from 'react-icons/lib';
 
 import "./Navbar.css";
 
@@ -19,7 +16,6 @@ function Navbar({ isScrolled }) {
 
   return (
     <>
-      {/* <IconContext.Provider value={{ color: '#fff' }}> */}
       <nav className={["navbar", isScrolled ? "scroll" : ""].join(" ")}>
         <div className="navbar-container container">
           <Link
@@ -60,63 +56,62 @@ function Navbar({ isScrolled }) {
           </div>
           <ul className={isMobileMenuOpen ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link
-                to="/services"
-                className="nav-links hover-underline-animation"
+              <NavLink
+                to="/fitting"
+                className={(link) => link.isActive && window.innerWidth > 960 ? "nav-links underline-active" : "nav-links hover-underline-animation"}
                 onClick={closeMobileMenu}
               >
                 התאמת אופניים
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                to="/products"
-                className="nav-links hover-underline-animation"
+              <NavLink
+                to="/repairing"
+                className={(link) => link.isActive && window.innerWidth > 960 ? "nav-links underline-active" : "nav-links hover-underline-animation"}
                 onClick={closeMobileMenu}
               >
                 סנדאת תיקונים
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                to="/products"
-                className="nav-links hover-underline-animation"
+              <NavLink
+                to="/lessons"
+                className={(link) => link.isActive && window.innerWidth > 960 ? "nav-links underline-active" : "nav-links hover-underline-animation"}
                 onClick={closeMobileMenu}
               >
                 חוגי רכיבה
-              </Link>
+              </NavLink>
             </li>
-            <li className="nav-item">
-              <Link
+            {/* <li className="nav-item">
+              <NavLink
                 to="/products"
-                className="nav-links hover-underline-animation"
+                className={(link) => link.isActive && window.innerWidth > 960 ? "nav-links underline-active" : "nav-links hover-underline-animation"}
                 onClick={closeMobileMenu}
               >
                 מאמרים וכתבות
-              </Link>
-            </li>
+              </NavLink>
+            </li> */}
             <li className="nav-item">
-              <Link
+              <NavLink
                 to="/gallery"
-                className="nav-links hover-underline-animation"
+                className={(link) => link.isActive && window.innerWidth > 960 ? "nav-links underline-active" : "nav-links hover-underline-animation"}
                 onClick={closeMobileMenu}
               >
                 גלריית תמונות
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
+              <NavLink
                 to="/contact"
-                className="nav-links hover-underline-animation"
+                className={(link) => link.isActive && window.innerWidth > 960 ? "nav-links underline-active" : "nav-links hover-underline-animation"}
                 onClick={closeMobileMenu}
               >
                 צרו קשר
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
       </nav>
-      {/* </IconContext.Provider> */}
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 import "./App.css";
 
@@ -7,8 +8,11 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import PhotoGalleryPage from "./pages/PhotoGalleryPage/PhotoGalleryPage";
 import Home from "./pages/HomePage/Home";
-import Contact from "./pages/Contact/Contact";
+import ContactPage from "./pages/ContactPage/ContactPage";
 import LoadingPage from "./pages/LoadingPage/LoadingPage"
+import FittingPage from "./pages/FittingPage/FittingPage"
+import LessonsPage from "./pages/LessonsPage/LessonsPage";
+import RepairingPage from "./pages/RepairingPage/RepairingPage";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,11 +61,18 @@ function App() {
       <LoadingPage isMobile={isMobile} /> :
       <Router>
         <Navbar isScrolled={isScrolled} />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/gallery" component={PhotoGalleryPage} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
+        <MessengerCustomerChat
+          pageId="428350617181692"
+          appId="333339345617704"
+        />
+        <Routes>
+          <Route path="/" exact element={<Home></Home>} />
+          <Route path="/gallery" element={<PhotoGalleryPage></PhotoGalleryPage>} />
+          <Route path="/contact" element={<ContactPage></ContactPage>} />
+          <Route path="/fitting" element={<FittingPage></FittingPage>} />
+          <Route path="/lessons" element={<LessonsPage></LessonsPage>} />
+          <Route path="/repairing" element={<RepairingPage></RepairingPage>} />
+        </Routes>
         <Footer />
       </Router>
   );

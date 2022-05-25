@@ -1,5 +1,4 @@
 .background-section {
-  background-color: var(--secondary);
   color: #fff;
   padding: 40px 0;
   background-repeat: no-repeat;
@@ -20,9 +19,7 @@
 }
 
 .split-section-col {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-  padding: 4rem 4rem 4rem 4rem;
+  padding: 4rem 2rem;
 }
 
 .split-section-text {
@@ -34,6 +31,7 @@
   align-items: center;
   justify-content: center;
   align-content: center;
+  padding-bottom: 1rem;
 }
 
 .heading-secondary {
@@ -142,18 +140,8 @@ img {
   display: inline-block;
 }
 
-@media screen and (max-width: 991px) {
-  .container {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
 
 @media screen and (max-width: 768px) {
-  .general-container-light:after {
-    width: calc(185% + 1.3px);
-  }
-
   .background-section{
     background-size: 350%;
   }

@@ -1,5 +1,4 @@
 import Review from "../../components/Review/Review";
-import Section from "../../components/Sections/Section/Section";
 
 export const homeObjOne = {
   lightBg: false,
@@ -27,7 +26,6 @@ export const homeObjTwo = {
   imgStart: "",
   img: "images/chain-cartoon.png",
   alt: "Repaire",
-  icon: "fa-solid fa-screwdriver-wrench",
 };
 
 export const homeObjThree = {
@@ -42,8 +40,6 @@ export const homeObjThree = {
   imgStart: "start",
   img: "images/chair-cartoon.png",
   alt: "Ride",
-  icon: "fa-solid fa-person-chalkboard",
-
 };
 
 export const homeObjFour = {
@@ -57,8 +53,6 @@ export const homeObjFour = {
   imgStart: "",
   img: "images/tool-cartoon.png",
   alt: "BikeFit",
-  icon: "fa-solid fa-person-biking",
-
 };
 
 export const AboutUs = {
@@ -115,56 +109,56 @@ export const photos = [
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799"></img>
+        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799"></img>
+        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799"></img>
+        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799"></img>
+        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799"></img>
+        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799"></img>
+        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799"></img>
+        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799"></img>
+        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799" alt=""></img>
       )
     },
   },

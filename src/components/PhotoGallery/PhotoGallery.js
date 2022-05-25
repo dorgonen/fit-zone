@@ -30,7 +30,7 @@ function PhotoGallery({ photos, filters }) {
           <button
             key={filter.value}
             onClick={() => handleFilterBtnClick(filter.value)}
-            isChecked={selectedFilter === filter.value}
+            // isChecked={selectedFilter === filter.value}
           >
             {filter.label}
           </button>
