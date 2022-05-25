@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 import "./App.css";
 
@@ -61,10 +60,6 @@ function App() {
       <LoadingPage isMobile={isMobile} /> :
       <Router>
         <Navbar isScrolled={isScrolled} />
-        <MessengerCustomerChat
-          pageId="428350617181692"
-          appId="333339345617704"
-        />
         <Routes>
           <Route path="/" exact element={<Home></Home>} />
           <Route path="/gallery" element={<PhotoGalleryPage></PhotoGalleryPage>} />
