@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import Home from "./pages/HomePage/Home";
-import Contact from "./pages/Contact/Contact";
+import React, { useState, useEffect, useRef } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
-// import Services from './components/pages/Services/Services';
-// import Products from './components/pages/Products/Products';
-// import SignUp from './components/pages/SignUp/SignUp';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import PhotoGalleryPage from "./pages/PhotoGalleryPage/PhotoGalleryPage";
+import Home from "./pages/HomePage/Home";
+import ContactPage from "./pages/ContactPage/ContactPage";
+import LoadingPage from "./pages/LoadingPage/LoadingPage"
+import FittingPage from "./pages/FittingPage/FittingPage"
+import LessonsPage from "./pages/LessonsPage/LessonsPage";
+import RepairingPage from "./pages/RepairingPage/RepairingPage";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleScroll = () => {
     if (window.pageYOffset === 0) {
@@ -46,16 +50,31 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000)
+  }, []);
+
   return (
-    <Router>
-      <Navbar isScrolled={isScrolled} />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/gallery" component={PhotoGalleryPage} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
-      <Footer />
-    </Router>
+    isLoading ?
+      <LoadingPage isMobile={isMobile} /> :
+      <Router>
+        <Navbar isScrolled={isScrolled} />
+        <MessengerCustomerChat
+          pageId="428350617181692"
+          appId="333339345617704"
+        />
+        <Routes>
+          <Route path="/" exact element={<Home></Home>} />
+          <Route path="/gallery" element={<PhotoGalleryPage></PhotoGalleryPage>} />
+          <Route path="/contact" element={<ContactPage></ContactPage>} />
+          <Route path="/fitting" element={<FittingPage></FittingPage>} />
+          <Route path="/lessons" element={<LessonsPage></LessonsPage>} />
+          <Route path="/repairing" element={<RepairingPage></RepairingPage>} />
+        </Routes>
+        <Footer />
+      </Router>
   );
 }
 

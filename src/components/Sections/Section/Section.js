@@ -3,6 +3,7 @@ import './Section.css';
 import { Button } from '../../Button/Button';
 import { Link } from 'react-router-dom';
 import { IconButton } from '../../IconButton/IconButton';
+import ReactPlayer from "react-player"
 
 function Section({
   lightBg,
@@ -14,14 +15,15 @@ function Section({
   buttonLabel,
   img,
   alt,
-  imgStart
+  imgStart,
+  video
 }) {
   return (
     <>
       <div
         className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}
       >
-        <div className='container'>
+        <div className='container mobile-centered'>
           <div
             className='row home__hero-row'
             style={{
@@ -44,16 +46,30 @@ function Section({
                 >
                   {description}
                 </p>
-                <Link to='/sign-up'>
-                  <IconButton buttonSize='btn--wide' >
-                    {buttonLabel}
-                  </IconButton>
-                </Link>
+                {buttonLabel &&
+                  <Link to='/sign-up'>
+                    <IconButton buttonSize='btn--wide' >
+                      {buttonLabel}
+                    </IconButton>
+                  </Link>
+                }
               </div>
             </div>
             <div className='col'>
               <div className='home__hero-img-wrapper'>
-                <img src={img} alt={alt} className='home__hero-img' />
+                {img &&
+                  <img src={img} alt={alt} className='home__hero-img' />
+                }
+                {video &&
+                  <ReactPlayer
+                    url={video}
+                    controls
+                    height="250px"
+                    width='450px'
+                    playing
+                    muted
+                  ></ReactPlayer>
+                }
               </div>
             </div>
           </div>

@@ -14,7 +14,7 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const Slider = ({
   slides,
-  onSlideChange,
+  onSlideChange = () => { },
   pagination,
   navigation,
   backgroundColor,

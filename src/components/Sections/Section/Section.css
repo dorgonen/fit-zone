@@ -92,12 +92,6 @@ img {
   display: inline-block;
 }
 
-@media screen and (max-width: 991px) {
-  .container {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .general-container-light:after {

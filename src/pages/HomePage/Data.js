@@ -1,5 +1,4 @@
 import Review from "../../components/Review/Review";
-import Section from "../../components/Sections/Section/Section";
 
 export const homeObjOne = {
   lightBg: false,
@@ -25,9 +24,8 @@ export const homeObjTwo = {
     "אצלנו תמצאו סדנאת תיקונים המופעלת על ידי מכונאים בעלי עשרות שנות ניסיון.",
   buttonLabel: "למידע נוסף",
   imgStart: "",
-  img: "images/bike-fix-cartoon.png",
+  img: "images/chain-cartoon.png",
   alt: "Repaire",
-  icon: "fa-solid fa-screwdriver-wrench",
 };
 
 export const homeObjThree = {
@@ -40,10 +38,8 @@ export const homeObjThree = {
     "אנו מפעילים חוגי רכיבה אשר בהם נלווה אתכם מסיבוב הגלגל הראשון ועד שובכם הביתה.",
   buttonLabel: "התחילו לרכב",
   imgStart: "start",
-  img: "images/ride-safe-cartoon.png",
+  img: "images/chair-cartoon.png",
   alt: "Ride",
-  icon: "fa-solid fa-person-chalkboard",
-
 };
 
 export const homeObjFour = {
@@ -55,10 +51,8 @@ export const homeObjFour = {
   description: "אצלנו תוכלו לבצע התאמת אופניים מושלמת בשיטת ריטול המחורטטת. הביא לנו את כספכם ונברח איתו.",
   buttonLabel: "קבעו התאמה",
   imgStart: "",
-  img: "images/bike-fit-cartoon.png",
+  img: "images/tool-cartoon.png",
   alt: "BikeFit",
-  icon: "fa-solid fa-person-biking",
-
 };
 
 export const AboutUs = {
@@ -68,7 +62,7 @@ export const AboutUs = {
   // topLine: 'FitZone',
   headline: "מי אנחנו",
   description:
-    "פיטזון הוא סטודיו מקצועי לרוכב הפועל מאז שנת 1921. ברשותנו צוות מטורף המפעיל מלא ציוד ועושה ארגזים של כסף על חשבונכם.",
+    "פיטזון הוא סטודיו מקצועי לרוכב הפועל מאז שנת 1921. ברשותנו צוות מטורף המפעיל מלא ציוד ועושה ארגזים של כסף על חשבונכם. פה נבלבל לכם קצת את המוח על מי אנחנו ולמה אנחנו וכמה אנחנו כדי שתחשבו שאנחנו חנות מקצועית ותפלו בפח.",
   buttonLabel: "קראו עוד",
   imgStart: "",
   img: "images/main-pic-2.png",
@@ -115,56 +109,56 @@ export const photos = [
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799"></img>
+        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799"></img>
+        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799"></img>
+        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799"></img>
+        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799"></img>
+        <img src="https://source.unsplash.com/qDkso9nvCg0/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799"></img>
+        <img src="https://source.unsplash.com/iecJiKe_RNg/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799"></img>
+        <img src="https://source.unsplash.com/epcsn8Ed8kY/600x799" alt=""></img>
       )
     },
   },
   {
     renderItem: () => {
       return (
-        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799"></img>
+        <img src="https://source.unsplash.com/zh7GEuORbUw/600x799" alt=""></img>
       )
     },
   },

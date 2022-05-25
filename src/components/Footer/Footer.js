@@ -2,14 +2,6 @@ import React from 'react';
 import './Footer.css';
 import { Button } from '../Button/Button';
 import { Link } from 'react-router-dom';
-// import {
-//   FaFacebook,
-//   FaInstagram,
-//   FaYoutube,
-//   FaTwitter,
-//   FaLinkedin
-// } from 'react-icons/fa';
-// import { MdFingerprint } from 'react-icons/md';
 
 import { footerData } from './Data'
 
@@ -20,9 +12,11 @@ function Footer() {
         {/* <p className='footer-subscription-heading'>
         צרו איתנו קשר ונגנוב לכם את הכסף
         </p> */}
-        <p className='footer-subscription-text'>
-          צרו איתנו קשר ונגנוב לכם את הכסף
-        </p>
+        <div>
+          <p className='footer-subscription-text'>
+            צרו איתנו קשר ונגנוב לכם את הכסף
+          </p>
+        </div>
         <div className='footer-subscription-buttons'>
           <Button buttonColor='white'>צרו קשר</Button>
           <Button buttonStyle='btn--outline'>מי אנחנו</Button>

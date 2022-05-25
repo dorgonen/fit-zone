@@ -1,76 +1,83 @@
 import React from 'react';
 import './SplitSection.css';
 import { Button } from '../../Button/Button';
-import { Link } from 'react-router-dom';
 import RoundButton from '../../RoundButton/RoundButton';
 
 function SplitSection({
   items,
   bgImg,
-  headline
-  // topLine,
-  // lightText,
-  // lightTextDesc,
-  // headline,
-  // description,
-  // buttonLabel,
-  // img,
-  // alt,
-  // imgStart
+  headline,
+  lightBgColor
 }) {
+
+  const itemsCnt = items.length;
+  const itemPercent = itemsCnt > 0 ? (1 / itemsCnt) * 100 : 0;
+
+  const handleButtonClick = (item) => {
+    item.link ?
+      window.open(`${item.link}`, '_blank')
+      :
+      console.log('not link')
+
+  }
+
   return (
-    <>
-      <div className='background-section'
-        style={{ backgroundImage: `url(${bgImg})` }}
-      >
-        {/* <div className='backgroung-section-bg-img'
+    <div className='background-section'
+      style={{ backgroundColor: lightBgColor ? 'white' : 'var(--secondary)', backgroundImage: bgImg ? `url(${bgImg})` : 'none' }}
+    >
+      <div className='container mobile-centered'>
+        <div
+          className='row home__hero-row'
+          style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
         >
-        </div> */}
-        <div className='container'>
-          <div
-            className='row home__hero-row'
-            style={{
-              display: 'flex',
-              flexDirection: 'column'
-            }}
-          >
-            <h1 className='heading dark'>
-              {headline}
-            </h1>
-            <div className='split-section-row'>
-              {items.map((item, index) => {
-                return (
-                  <div key={index} className="split-section-col">
+          <h1 className='heading dark'>
+            {headline}
+          </h1>
+          <div className='split-section-row'>
+            {items.map((item, index) => {
+              return (
+                <div key={index} className="split-section-col" style={window.innerWidth <= 960 ? {} : { flex: `0 0 ${itemPercent}%`, maxWidth: `${itemPercent}%` }}>
+                  {item.img &&
                     <div className='split-section-img-wrapper'>
                       <img src={item.img} alt={item.alt} className='split-section-img' />
                     </div>
-                    <div className='split-section-text'>
-                      <h3 className='heading-secondary dark'>
-                        {item.headline}
-                      </h3>
-                      <p
-                        className={
-                          item.lightTextDesc
-                            ? 'home__hero-subtitle'
-                            : 'home__hero-subtitle dark'
-                        }
-                      >
-                        {item.description}
-                      </p>
-                    </div>
+                  }
+                  {item.icon &&
                     <div className='split-section-btn'>
-                      <RoundButton>
+                      <RoundButton onClick={() => handleButtonClick(item)}>
                         <i className={item.icon}></i>
                       </RoundButton>
                     </div>
+                  }
+                  <div className='split-section-text'>
+                    <h3 className='heading-secondary dark'>
+                      {item.headline}
+                    </h3>
+                    <p
+                      className={
+                        item.lightTextDesc
+                          ? 'split-section-subtitle'
+                          : 'split-section-subtitle dark'
+                      }
+                    >
+                      {item.description}
+                    </p>
                   </div>
-                )
-              })}
-            </div>
+                  {item.buttonLabel &&
+                    <div className='split-section-btn'>
+                      <Button buttonStyle='btn--outline' buttonColor='red'>{item.buttonLabel}</Button>
+                    </div>
+                  }
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

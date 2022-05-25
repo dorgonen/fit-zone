@@ -1,0 +1,63 @@
+
+
+.background-primary{
+    background-color: var(--primary);
+
+}
+.loading-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+.loading-img-container,.loading-img-container-mobile  {
+    position: absolute;
+    top: 40%;
+}
+
+.loading-img-container img {
+    width: 10%;
+}
+
+.loading-img-container-mobile img {
+    width: 20%;
+    height: 30%;
+}
+
+.spinning-wheel {
+    -webkit-animation-name: spinner;
+    animation-name: spinner;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}

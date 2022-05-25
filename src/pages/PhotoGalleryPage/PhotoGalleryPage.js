@@ -2,12 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { photos, filters } from "./Data";
 
 import PhotoGallery from "../../components/PhotoGallery/PhotoGallery";
-import MainSection from "../../components/Sections/MainSection/MainSection";
 
 const PhotoGalleryPage = () => {
   return (
     <>
-      <MainSection></MainSection>
+    <div style={{height: "200px"}}></div>
       <PhotoGallery photos={photos} filters={filters}></PhotoGallery>
     </>
   );

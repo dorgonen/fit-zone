@@ -10,18 +10,12 @@ const CardsSection = ({ items, lightBg }) => {
         >
             <div className='container'>
                 <div
-                    className='row home__hero-row'
-                    style={{
-                        display: 'flex',
-                    }}
-                >
-                    <div className='cards-col'>
-                        {items.map((card, index) =>
-                            <div key={index} className='card-wrapper'>
-                                <Card title={card.title} text={card.text} img={card.img}></Card>
-                            </div>
-                        )}
-                    </div>
+                    className='cards-container'>
+                    {items.map((card, index) =>
+                        <div key={index} className='card-wrapper'>
+                            <Card title={card.title} text={card.text} img={card.img}></Card>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

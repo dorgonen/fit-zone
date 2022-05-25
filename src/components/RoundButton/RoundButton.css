@@ -15,7 +15,15 @@
     cursor: pointer;
 }
 
-.round-button:hover {
+.small{
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+
+}
+
+.round-button:hover, .btn-active {
     background: transparent;
     border: 2px solid var(--primary);
     color: black;

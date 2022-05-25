@@ -8,13 +8,6 @@
   padding: 40px 0;
 }
 
-@media screen and (max-width: 991px) {
-  .container {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .home__hero-section {
     padding: 24px 0;
