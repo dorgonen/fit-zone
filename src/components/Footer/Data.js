@@ -5,28 +5,24 @@ export const footerData = [
       links: [
         {
           label: "התאמת אופניים",
-          link: '/'
+          link: '/fitting'
         },
         {
           label: "סדנאת תיקונים",
-          link: '/'
+          link: '/repairing'
         },
         {
           label: "חוגי רכיבה",
-          link: '/'
+          link: '/lessons'
         },
       ]
     },
     {
-      title: "מאמרים",
+      title: "תמונות",
       links: [
         {
-          label: "מאמרים וכתבות",
-          link: '/'
-        },
-        {
           label: "גלריית תמונות",
-          link: '/'
+          link: '/gallery'
         },
       ]
     }
@@ -41,30 +37,36 @@ export const footerData = [
         },
         {
           label: "צרו קשר",
-          link: '/'
+          link: '/contact'
         }
       ]
     },
-    {
-      title: "עקבו אחרינו",
-      links: [
-        {
-          label: "אינסטגרם",
-          icon: <i className="fa-brands fa-instagram"></i>,
-          link: '/',
-          className: 'social-icon-link',
-          target: '_blank',
-        },
-        {
-          label: "פייסבוק",
-          icon: <i className="fa-brands fa-facebook"></i>,
-          link: '/',
-          className: 'social-icon-link',
-          target: '_blank',
-        },
-      ]
-    }
   ]
-]
+];
 
+export const mobileFooterData = [
+  {
+    headline: 'עקבו אחרינו',
+    items: [
+      {
+        description: "פייסבוק",
+        headline: "פייסבוק",
+        icon: 'fa-brands fa-facebook',
+        link: 'https://www.facebook.com/FitZoneIsrael'
+      },
+      {
+        description: "אינסטגרם",
+        headline: "אינסטגרם",
+        icon: 'fa-brands fa-instagram',
+        link: 'https://www.instagram.com/fitzonestore'
+      },
+      {
+        description: "UTUBE",
+        headline: "UTUBE",
+        icon: 'fa-brands fa-youtube',
+        link: ''
+      },
+    ]
+  },
+]
 

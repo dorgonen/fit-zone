@@ -1,17 +1,15 @@
 import React from 'react';
 import './Footer.css';
 import { Button } from '../Buttons/Button/Button';
+import RoundButton from '../Buttons/RoundButton/RoundButton';
 import { Link } from 'react-router-dom';
 
-import { footerData } from './Data'
+import { footerData, mobileFooterData } from './Data'
 
 function Footer() {
   return (
     <div className='footer-container'>
       <div className='footer-subscription'>
-        {/* <p className='footer-subscription-heading'>
-        צרו איתנו קשר ונגנוב לכם את הכסף
-        </p> */}
         <div>
           <p className='footer-subscription-text'>
             צרו איתנו קשר ונגנוב לכם את הכסף
@@ -40,11 +38,31 @@ function Footer() {
           </div>)}
       </div>
 
-      <section className='social-media'>
-        <div className='social-media-wrap'>
-          <small className='website-rights'>FITZOZE © 2022</small>
-        </div>
-      </section>
+      {mobileFooterData.map((mobileSection, mobileSectionIndex) => {
+        return <section className='social-media' key={mobileSectionIndex}>
+          <div className='social-media-wrap'>
+            <div className='container mobile-centered' style={{ flexDirection: 'column' }}>
+              <h2 className='footer-title'>{mobileSection.headline}</h2>
+              <div className='social-media-buttons-wrapper'>
+                {mobileSection.items.map((item, index) => {
+                  return (
+                    <div key={index} className="social-media-button" >
+                      {item.icon &&
+                        <div className='split-section-btn' key={index}>
+                          <RoundButton link={item.link}>
+                            <i className={item.icon}></i>
+                          </RoundButton>
+                        </div>
+                      }
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+      })}
+      <p className='footer-copyright'>Fitzone © 2022</p>
     </div >
   );
 }

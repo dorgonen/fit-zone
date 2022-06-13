@@ -6,7 +6,7 @@ export const homeObjOne = {
   lightTextDesc: false,
   // topLine: 'Exclusive Access',
   headlineUpper: "שפרו את",
-  headlineMiddle: ["הנוחות", "היעילות", "הביצועים", "הגמישות", "ההנאה"],
+  headlineMiddle: ["הנוחות", "היעילות", "הביצועים", "ההנאה"],
   headlineFooter: "ברכיבה שלכם",
   buttonLabel: "קראו עוד",
   imgStart: "",
