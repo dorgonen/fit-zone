@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import RoundButton from '../RoundButton/RoundButton';
+import RoundButton from '../Buttons/RoundButton/RoundButton';
 
 import './Card.css'
 const Card = ({ img, title, text }) => {

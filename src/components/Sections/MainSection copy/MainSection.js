@@ -18,7 +18,6 @@ function MainSection({
   img,
   alt,
   imgStart,
-  route
 }) {
 
   return (
@@ -39,7 +38,12 @@ function MainSection({
                 <h1>{headlineFooter}</h1>
               </div>
               <p className="main-section-subtitle">{description}</p>
-              <IconButton buttonStyle="transparent-white" route={route}>{buttonLabel}</IconButton>
+              {/* <Link to="/sign-up">
+                <Button buttonSize="btn--wide" buttonStyle="btn--outline">{buttonLabel}</Button>
+              </Link> */}
+              <Link to="/sign-up" style={{textDecoration: 'none'}}>
+                <IconButton buttonStyle="transparent-white">{buttonLabel}</IconButton>
+              </Link>
             </div>
           </div>
         </div>

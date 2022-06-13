@@ -12,7 +12,7 @@ export const contactItems = {
       headline: "WhatsApp",
       icon: 'fa-brands fa-whatsapp',
       lightTextDesc: false,
-      link:'https://api.whatsapp.com/send?phone=9720502618403'
+      link: 'https://api.whatsapp.com/send?phone=9720502618403'
     },
     {
       description: "צרו איתנו קשר בטלפון.",
@@ -27,6 +27,8 @@ export const contactItems = {
       headline: "Messenger",
       icon: 'fa-brands fa-facebook-messenger',
       lightTextDesc: false,
+      link: 'https://m.me/FitZoneIsrael'
+
     },
     {
       description: "מעדיפים לשלוח לנו מייל? צרו איתנו קשר בכתובת zz@zz.com",
@@ -35,7 +37,7 @@ export const contactItems = {
       lightTextDesc: false,
     },
   ]
-} 
+}
 
 export const mapData = {
   headline: "סטודיו פיט-זון",

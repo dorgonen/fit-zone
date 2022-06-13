@@ -8,10 +8,11 @@ export const homeObjOne = {
   headlineUpper: "שפרו את",
   headlineMiddle: ["הנוחות", "היעילות", "הביצועים", "הגמישות", "ההנאה"],
   headlineFooter: "ברכיבה שלכם",
-  buttonLabel: "לתיאום פגישה",
+  buttonLabel: "קראו עוד",
   imgStart: "",
   img: "images/main-pic.png",
   alt: "Credit Card",
+  route: "/fitting",
 };
 
 export const homeObjTwo = {
@@ -26,6 +27,8 @@ export const homeObjTwo = {
   imgStart: "",
   img: "images/chain-cartoon.png",
   alt: "Repaire",
+  route: "/repairing",
+
 };
 
 export const homeObjThree = {
@@ -40,6 +43,7 @@ export const homeObjThree = {
   imgStart: "start",
   img: "images/chair-cartoon.png",
   alt: "Ride",
+  route: "/lessons",
 };
 
 export const homeObjFour = {
@@ -53,6 +57,7 @@ export const homeObjFour = {
   imgStart: "",
   img: "images/tool-cartoon.png",
   alt: "BikeFit",
+  route: "/fitting",
 };
 
 export const AboutUs = {
@@ -63,10 +68,12 @@ export const AboutUs = {
   headline: "מי אנחנו",
   description:
     "פיטזון הוא סטודיו מקצועי לרוכב הפועל מאז שנת 1921. ברשותנו צוות מטורף המפעיל מלא ציוד ועושה ארגזים של כסף על חשבונכם. פה נבלבל לכם קצת את המוח על מי אנחנו ולמה אנחנו וכמה אנחנו כדי שתחשבו שאנחנו חנות מקצועית ותפלו בפח.",
-  buttonLabel: "קראו עוד",
+  buttonLabel: "הכירו אותנו",
   imgStart: "",
   img: "images/main-pic-2.png",
   alt: "BikeFit",
+  route: "/contact",
+
 };
 
 export const reviews = [

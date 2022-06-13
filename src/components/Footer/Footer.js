@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from '../Button/Button';
+import { Button } from '../Buttons/Button/Button';
 import { Link } from 'react-router-dom';
 
 import { footerData } from './Data'
@@ -18,8 +18,8 @@ function Footer() {
           </p>
         </div>
         <div className='footer-subscription-buttons'>
-          <Button buttonColor='white'>צרו קשר</Button>
-          <Button buttonStyle='btn--outline'>מי אנחנו</Button>
+          <Button buttonColor='white' route="/contact">צרו קשר</Button>
+          <Button buttonStyle='btn--outline' route="/contact">מי אנחנו</Button>
         </div>
       </div>
       <div className='footer-links'>

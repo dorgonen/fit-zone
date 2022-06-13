@@ -1,7 +1,7 @@
 import React from 'react';
 import './SplitSection.css';
-import { Button } from '../../Button/Button';
-import RoundButton from '../../RoundButton/RoundButton';
+import { Button } from '../../Buttons/Button/Button';
+import RoundButton from '../../Buttons/RoundButton/RoundButton';
 
 function SplitSection({
   items,
@@ -12,14 +12,6 @@ function SplitSection({
 
   const itemsCnt = items.length;
   const itemPercent = itemsCnt > 0 ? (1 / itemsCnt) * 100 : 0;
-
-  const handleButtonClick = (item) => {
-    item.link ?
-      window.open(`${item.link}`, '_blank')
-      :
-      console.log('not link')
-
-  }
 
   return (
     <div className='background-section'
@@ -47,7 +39,7 @@ function SplitSection({
                   }
                   {item.icon &&
                     <div className='split-section-btn'>
-                      <RoundButton onClick={() => handleButtonClick(item)}>
+                      <RoundButton link={item.link}>
                         <i className={item.icon}></i>
                       </RoundButton>
                     </div>
@@ -68,7 +60,7 @@ function SplitSection({
                   </div>
                   {item.buttonLabel &&
                     <div className='split-section-btn'>
-                      <Button buttonStyle='btn--outline' buttonColor='red'>{item.buttonLabel}</Button>
+                      <Button buttonStyle='btn--outline' buttonColor='red' route={item.route}>{item.buttonLabel}</Button>
                     </div>
                   }
                 </div>
