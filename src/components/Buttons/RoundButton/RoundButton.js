@@ -8,7 +8,8 @@ function RoundButton({
     onClick = () => { },
     children,
     link,
-    route
+    route,
+    tel
 }) {
     const navigate = useNavigate();
     const handleOnClick = useCallback(() => navigate(route, { replace: true }), [navigate]);
@@ -20,9 +21,12 @@ function RoundButton({
         else if (route) {
             handleOnClick()
         }
+        else if (tel) {
+            document.location.href = `tel:${tel}`;
+        }
         else onClick(event);
     }
-    
+
     return (
         <button className={`round-button ${size} ${active ? 'btn-active' : ''}`} onClick={handleButtonClick}>
             {children}

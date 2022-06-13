@@ -15,10 +15,11 @@ export const contactItems = {
       link: 'https://api.whatsapp.com/send?phone=9720502618403'
     },
     {
-      description: "צרו איתנו קשר בטלפון.",
+      description: "צרו איתנו קשר בטלפון שמספרו 052-61-8403.",
       headline: "טלפון",
       icon: 'fa-solid fa-phone',
       lightTextDesc: false,
+      tel: '+9722618403'
 
 
     },
