@@ -35,6 +35,9 @@ export const Button = ({
     else if (route) {
       handleOnClick()
     }
+    else if (tel) {
+      document.location.href = `tel:${tel}`;
+    }
     else onClick(event);
   }
 
