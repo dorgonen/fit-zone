@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import "./App.css";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -12,6 +11,7 @@ import LoadingPage from "./pages/LoadingPage/LoadingPage"
 import FittingPage from "./pages/FittingPage/FittingPage"
 import LessonsPage from "./pages/LessonsPage/LessonsPage";
 import RepairingPage from "./pages/RepairingPage/RepairingPage";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop"
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,15 +60,25 @@ function App() {
       <LoadingPage isMobile={isMobile} /> :
       <Router>
         <Navbar isScrolled={isScrolled} />
-        <Routes>
-          <Route path="/" exact element={<Home></Home>} />
-          <Route path="/gallery" element={<PhotoGalleryPage></PhotoGalleryPage>} />
-          <Route path="/contact" element={<ContactPage></ContactPage>} />
-          <Route path="/fitting" element={<FittingPage></FittingPage>} />
-          <Route path="/lessons" element={<LessonsPage></LessonsPage>} />
-          <Route path="/repairing" element={<RepairingPage></RepairingPage>} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" exact element={<Home></Home>} />
+            <Route path="/gallery" element={<PhotoGalleryPage></PhotoGalleryPage>} />
+            <Route path="/contact" element={<ContactPage></ContactPage>} />
+            <Route path="/fitting" element={<FittingPage></FittingPage>} />
+            <Route path="/lessons" element={<LessonsPage></LessonsPage>} />
+            <Route path="/repairing" element={<RepairingPage></RepairingPage>} />
+          </Routes>
+        </ScrollToTop>
         <Footer />
+        <a
+          href="https://api.whatsapp.com/send?phone=9720502618403"
+          className="whatsapp_float"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa fa-whatsapp whatsapp-icon"></i>
+        </a>
       </Router>
   );
 }

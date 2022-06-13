@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Button } from "../Button/Button";
 
 import "./Navbar.css";
 

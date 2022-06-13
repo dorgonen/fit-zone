@@ -1,8 +1,8 @@
 import React from 'react';
 import './Section.css';
-import { Button } from '../../Button/Button';
+import { Button } from '../../Buttons/Button/Button';
 import { Link } from 'react-router-dom';
-import { IconButton } from '../../IconButton/IconButton';
+import { IconButton } from '../../Buttons/IconButton/IconButton';
 import ReactPlayer from "react-player"
 
 function Section({
@@ -16,7 +16,8 @@ function Section({
   img,
   alt,
   imgStart,
-  video
+  video,
+  route
 }) {
   return (
     <>
@@ -47,11 +48,9 @@ function Section({
                   {description}
                 </p>
                 {buttonLabel &&
-                  <Link to='/sign-up'>
-                    <IconButton buttonSize='btn--wide' >
-                      {buttonLabel}
-                    </IconButton>
-                  </Link>
+                  <IconButton buttonSize='btn--wide' route={route} >
+                    {buttonLabel}
+                  </IconButton>
                 }
               </div>
             </div>
@@ -64,8 +63,8 @@ function Section({
                   <ReactPlayer
                     url={video}
                     controls
-                    height="250px"
-                    width='450px'
+                    height={window.innerWidth <= 960 ? "300px" : "320px"}
+                    width={window.innerWidth <= 960 ? "330px" : "420px"}
                     playing
                     muted
                   ></ReactPlayer>
