@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import PhotoGalleryPage from "./pages/PhotoGalleryPage/PhotoGalleryPage";
-import Home from "./pages/HomePage/Home";
-import ContactPage from "./pages/ContactPage/ContactPage";
 import LoadingPage from "./pages/LoadingPage/LoadingPage"
-import FittingPage from "./pages/FittingPage/FittingPage"
-import LessonsPage from "./pages/LessonsPage/LessonsPage";
-import RepairingPage from "./pages/RepairingPage/RepairingPage";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop"
+import { lazyLoading } from "./utils";
+
+
+const Home = lazyLoading("./pages/HomePage/Home", 1000);
+const PhotoGalleryPage = lazyLoading("./pages/PhotoGalleryPage/PhotoGalleryPage", 800);
+const FittingPage = lazyLoading("./pages/FittingPage/FittingPage", 800);
+const LessonsPage = lazyLoading("./pages/LessonsPage/LessonsPage", 800);
+const RepairingPage = lazyLoading("./pages/RepairingPage/RepairingPage", 800);
+const ContactPage = lazyLoading("./pages/ContactPage/ContactPage", 800);
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   const handleScroll = () => {
     if (window.pageYOffset === 0) {
@@ -49,15 +51,8 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000)
-  }, []);
-
   return (
-    isLoading ?
-      <LoadingPage isMobile={isMobile} /> :
+    <Suspense fallback={<LoadingPage isMobile={isMobile} />}>
       <Router>
         <Navbar isScrolled={isScrolled} />
         <ScrollToTop>
@@ -80,6 +75,8 @@ function App() {
           <i className="fa fa-whatsapp whatsapp-icon"></i>
         </a>
       </Router>
+    </Suspense>
+
   );
 }
 
