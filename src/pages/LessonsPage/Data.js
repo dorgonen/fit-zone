@@ -10,7 +10,6 @@ export const lessonsData = {
   lightTextDesc: false,
   headline: "בואו לרכב איתנו!",
   description: "זה המקום שלנו לבלבל לכם את המוח על חוגי רכיבה איתנו. הרשמו עוד היום ותכינו ארגזים של כסף שיילקח מכם.",
-  imgStart: "",
   // img: "images/repair-photo.jpg",
   alt: "BikeFit",
 };

@@ -26,11 +26,7 @@ function Section({
       >
         <div className='container mobile-centered'>
           <div
-            className='row home__hero-row'
-            style={{
-              display: 'flex',
-              flexDirection: window.innerWidth <= 960 ? '' : imgStart === 'start' ? 'row-reverse' : 'row'
-            }}
+            className={`row section-row ${imgStart ? 'img-start' : ''}`}
           >
             <div className='col'>
               <div className='home__hero-text-wrapper'>
