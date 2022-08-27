@@ -25,10 +25,7 @@ function Section({
       <div className={`section-container ${lightBg ? "lightBg" : "darkBg"}`}>
         <div className='container mobile-centered'>
           <div
-            className='row section-row'
-            style={{
-              flexDirection: isMobile ? imgStart === 'start' ? 'row-reverse' : 'row' : ''
-            }}
+            className={`row section-row ${imgStart ? 'img-start' : ''}`}
           >
             <div className='col'>
               <div className='section-text-wrapper'>

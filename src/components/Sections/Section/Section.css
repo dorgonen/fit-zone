@@ -6,6 +6,11 @@
 
 .section-row {
   align-items: center;
+  flex-direction: row;
+}
+
+.img-start{
+  flex-direction: row-reverse;
 }
 
 .row {
@@ -117,6 +122,10 @@ img {
 
   .home__hero-row{
     display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .section-row {
     flex-direction: column-reverse;
   }
 }

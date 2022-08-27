@@ -12,7 +12,6 @@ export const repairingData = {
   headline: "תיקון אופניים",
   description: "זה המקום שלנו לבלבל לכם את המוח על תיקון אופניים. הרשמו עוד היום ותכינו ארגזים של כסף שיילקח מכם.",
   // buttonLabel: "קראו עוד",
-  imgStart: "",
   img: "images/repair-photo-min.jpg",
   alt: "BikeFit",
 };

@@ -12,7 +12,6 @@ export const bikeFittingData = {
   headline: "רכיבה יעילה ובריאה",
   description: "זה המקום שלנו לבלבל לכם את המוח על התאמת אופניים בשיטת חירטוט הממוחשבת לרוכב. הרשמו עוד היום ותכינו ארגזים של כסף שיילקח מכם.",
   // buttonLabel: "קראו עוד",
-  imgStart: "",
   video: "https://www.youtube.com/v/neEUF_3MVDo&t=28s",
   alt: "BikeFit",
 };
