@@ -1,6 +1,6 @@
 export const contactPageData = {
   headline: "צרו קשר",
-  bgImg: "images/contact-us-cover.jpg",
+  bgImg: "images/contact-us-cover-min.jpg",
   mobileBgPosition: 'bottom right'
 };
 
