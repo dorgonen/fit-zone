@@ -57,7 +57,7 @@ export const homeObjFour = {
 };
 
 export const AboutUs = {
-  lightBg: false,
+  lightBg: true,
   lightText: false,
   lightTextDesc: false,
   // topLine: 'FitZone',
@@ -105,7 +105,7 @@ export const reviews = [
 export const splitSectionData = {
   items: [homeObjTwo, homeObjFour, homeObjThree],
   headline: "השירותים שלנו",
-  bgImg: "images/bicycle-bg-transparent.png"
+  bgImg: "images/bicycle-bg-transparent-min.png"
 }
 
 export const photos = [

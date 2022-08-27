@@ -1,6 +1,6 @@
 export const repairingPageData = {
   headline: "סדנאת תיקונים",
-  bgImg: "images/repair-cover.jpg",
+  bgImg: "images/repair-cover-min.jpg",
   mobileBgPosition: 'bottom'
 };
 
@@ -20,17 +20,17 @@ export const cardsItems = [
   {
     text: "זה הזמן ומהקום לבלבל לכם את המוח במלא בולשיט על ההתאמה הכי לא משתלמת שתמצאו. כן כן, זוהי התאמה לפני קניה.",
     title: "התאמה לפני קנייה",
-    img: "images/fitting-cover.jpg",
+    img: "images/fitting-cover-min.jpg",
   },
   {
     text: "זה הזמן ומהקום לבלבל לכם את המוח במלא בולשיט על ההתאמה הכי לא משתלמת שתמצאו. כן כן, זוהי התאמה לפני קניה.",
     title: "התאמה לכל סוגי האופניים",
-    img: "images/main-pic-2.png",
+    img: "images/main-pic-2-min.png",
   },
   {
     text: "זה הזמן ומהקום לבלבל לכם את המוח במלא בולשיט על ההתאמה הכי לא משתלמת שתמצאו. כן כן, זוהי התאמה לפני קניה.",
     title: "התאמה חוזרת",
-    img: 'images/bgpic.jpg',
+    img: 'images/bgpic-min.jpg',
   },
 ];
 
