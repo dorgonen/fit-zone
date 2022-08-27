@@ -37,10 +37,6 @@
   color: var(--dark-color)
 }
 
-.darkBg {
-  background-color: var(--dark-background);
-}
-
 @media screen and (max-width: 768px) {
 
   .cards-col {

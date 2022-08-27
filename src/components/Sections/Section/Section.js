@@ -6,6 +6,7 @@ import { IconButton } from '../../Buttons/IconButton/IconButton';
 import ReactPlayer from "react-player"
 
 function Section({
+  isMobile,
   lightBg,
   topLine,
   lightText,
@@ -21,30 +22,21 @@ function Section({
 }) {
   return (
     <>
-      <div
-        className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}
-      >
+      <div className={`section-container ${lightBg ? "lightBg" : "darkBg"}`}>
         <div className='container mobile-centered'>
           <div
-            className='row home__hero-row'
+            className='row section-row'
             style={{
-              display: 'flex',
-              flexDirection: window.innerWidth <= 960 ? '' : imgStart === 'start' ? 'row-reverse' : 'row'
+              flexDirection: isMobile ? imgStart === 'start' ? 'row-reverse' : 'row' : ''
             }}
           >
             <div className='col'>
-              <div className='home__hero-text-wrapper'>
+              <div className='section-text-wrapper'>
                 <div className='top-line'>{topLine}</div>
-                <h1 className={lightText ? 'heading' : 'heading dark'}>
+                <h1 className={`heading ${lightText ? "" : "dark"}`}>
                   {headline}
                 </h1>
-                <p
-                  className={
-                    lightTextDesc
-                      ? 'home__hero-subtitle'
-                      : 'home__hero-subtitle dark'
-                  }
-                >
+                <p className={`section-subtitle ${lightTextDesc ? '' : 'dark'}`}>
                   {description}
                 </p>
                 {buttonLabel &&
@@ -57,7 +49,10 @@ function Section({
             <div className='col'>
               <div className='home__hero-img-wrapper'>
                 {img &&
-                  <img src={img} alt={alt} className='home__hero-img' />
+                  <img
+                    loading="lazy"
+                    src={img}
+                    alt={alt} className='home__hero-img' />
                 }
                 {video &&
                   <ReactPlayer

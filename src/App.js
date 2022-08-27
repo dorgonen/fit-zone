@@ -57,7 +57,7 @@ function App() {
         <Navbar isScrolled={isScrolled} />
         <ScrollToTop>
           <Routes>
-            <Route path="/" exact element={<Home></Home>} />
+            <Route path="/" exact element={<Home isMobile={isMobile}></Home>} />
             <Route path="/gallery" element={<PhotoGalleryPage></PhotoGalleryPage>} />
             <Route path="/contact" element={<ContactPage></ContactPage>} />
             <Route path="/fitting" element={<FittingPage></FittingPage>} />
