@@ -2,8 +2,8 @@
 
 .background-primary{
     background-color: var(--primary);
-
 }
+
 .loading-page-container {
     display: flex;
     flex-direction: column;

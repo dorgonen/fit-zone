@@ -1,5 +1,5 @@
 export const repairingPageData = {
-  headline: "סדנאת תיקונים",
+  headline: "סדנת תיקונים",
   bgImg: "images/repair-cover-min.jpg",
   mobileBgPosition: 'bottom'
 };
@@ -8,12 +8,52 @@ export const repairingData = {
   lightBg: false,
   lightText: false,
   lightTextDesc: false,
-  // topLine: 'FitZone',
   headline: "תיקון אופניים",
-  description: "זה המקום שלנו לבלבל לכם את המוח על תיקון אופניים. הרשמו עוד היום ותכינו ארגזים של כסף שיילקח מכם.",
-  // buttonLabel: "קראו עוד",
-  img: "images/repair-photo-min.jpg",
+  descriptions: <>
+    <p>
+      בפיט זון תמצאו סדנת תיקונים מהמקצועיות בארץ, המציעה טיפול לכל סוגי האופניים מהפשוטות ועד המקצועיות ביותר.
+      <br></br>
+      לצוות הטכני ניסיון של שנים רבות בענף האופניים, זמינות גבוהה של חלקי חילוף לאופניים בכל רמות המאפשרת שירות מהיר, יסודי ואדיב ללא הבדלי מותג, פירמה וייעוד.
+    </p>
+  </>,
   alt: "BikeFit",
+};
+
+export const repairingAdditionalData = {
+  lightBg: false,
+  lightText: false,
+  lightTextDesc: false,
+  img: "images/repair-photo-min.jpg",
+  descriptions: <>
+    <p>
+      <strong>מגוון השירותים הניתנים בסדנת התיקונים:</strong>
+    </p>
+    <ul>
+      <li>
+        תיקוני חרום
+      </li>
+      <li>
+        טיפולים שוטפים
+      </li>
+      <li>
+        כיוון הילוכים ובלמים
+      </li>
+      <li>
+        תיקון ושיפוץ מערכות בלמי דיסק בכל הרמות
+      </li>
+      <li>
+        טיפול בבולמי חברת וכן כיוון ושירות לבולמים מחברות שונות
+      </li>
+      <li>
+        בניית גלגלים
+      </li>
+      <li>
+        הרכבת אופני חלומות לפי מפרט אישי
+      </li>      <li>
+        תיקון ושיפוץ אופניים מכל הסוגים
+      </li>
+    </ul>
+  </>,
 };
 
 export const cardsItems = [

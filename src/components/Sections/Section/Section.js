@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Section.css';
 import { Button } from '../../Buttons/Button/Button';
+import RoundButton from '../../Buttons/RoundButton/RoundButton';
 import { Link } from 'react-router-dom';
 import { IconButton } from '../../Buttons/IconButton/IconButton';
 import ReactPlayer from "react-player"
@@ -18,8 +19,17 @@ function Section({
   alt,
   imgStart,
   video,
+  additionalDescriptions = [],
   route
 }) {
+  const [isExpandedArray, setIsExpandedArray] = useState(Array.from({ length: additionalDescriptions.length }), false);
+
+  const handleExpandedClick = (paragraphIndex) => {
+    const newArray = [...isExpandedArray]
+    newArray[paragraphIndex] = !newArray[paragraphIndex]
+    setIsExpandedArray(newArray)
+  }
+
   return (
     <>
       <div className={`section-container ${lightBg ? "lightBg" : "darkBg"}`}>
@@ -34,7 +44,12 @@ function Section({
                   {headline}
                 </h1>
                 <p className={`section-subtitle ${lightTextDesc ? '' : 'dark'}`}>
-                  {description}
+                  {(Array.isArray(description) ? description : [description]).map((item, index) =>
+                    <React.Fragment key={index}>
+                      <br />{item}
+                    </React.Fragment>
+                  )
+                  }
                 </p>
                 {buttonLabel &&
                   <IconButton buttonSize='btn--wide' route={route} >
@@ -64,6 +79,37 @@ function Section({
               </div>
             </div>
           </div>
+          {(additionalDescriptions).map((paragraph, paragraphIndex) =>
+            <div key={paragraphIndex} className="row section-row">
+              <div className='additional-description-text-wrapper'>
+                {paragraph.headline &&
+                  <h5 className={`sub-heading ${lightText ? "" : "dark"}`}>
+                    {paragraph.headline}
+                  </h5>
+                }
+                {isExpandedArray[paragraphIndex] ?
+                  paragraph.descriptions.map((description, innerIndex) =>
+                    <p key={innerIndex} className={`additional-description-subtitle ${lightTextDesc ? '' : 'dark'}`}>
+                      {description}
+                    </p>) :
+                  <p className={`additional-description-subtitle ${lightTextDesc ? '' : 'dark'}`}>
+                    {`${paragraph.descriptions[0].substring(0, 400)}...`}
+                  </p>
+                }
+                <div style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
+                  <RoundButton size='small' active={isExpandedArray[paragraphIndex]} onClick={() => handleExpandedClick(paragraphIndex)}>
+                    <i className={isExpandedArray[paragraphIndex] ? 'fa-solid fa-angle-down icon-expanded' : 'fa-solid fa-angle-down'} ></i>
+                  </RoundButton>
+                  {isExpandedArray[paragraphIndex] ?
+                    <h5 className='dark'>צמצם</h5>
+                    :
+                    <h5 className='dark'>המשך לקרוא</h5>
+                  }
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
       </div>
     </>

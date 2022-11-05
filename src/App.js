@@ -75,7 +75,7 @@ function App() {
           <i className="fa fa-whatsapp whatsapp-icon"></i>
         </a>
       </Router>
-    </Suspense>
+     </Suspense>
 
   );
 }

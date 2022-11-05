@@ -7,6 +7,7 @@ function SplitSection({
   items,
   bgImg,
   headline,
+  description,
   lightBgColor
 }) {
 
@@ -28,6 +29,11 @@ function SplitSection({
           <h1 className='heading dark'>
             {headline}
           </h1>
+          {description && 
+          <h5 className='heading-third dark'>
+            {description}
+          </h5>
+          }
           <div className='split-section-row'>
             {items.map((item, index) => {
               return (

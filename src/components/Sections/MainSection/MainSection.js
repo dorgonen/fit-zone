@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
 
 import "./MainSection.css";
 import { Button } from "../../Buttons/Button/Button";
 import { Link } from "react-router-dom";
 import { IconButton } from "../../Buttons/IconButton/IconButton";
+import AnimatedTitle from "../../AnimatedTitle/AnimatedTitle";
 
 function MainSection({
   topLine,
@@ -29,13 +29,7 @@ function MainSection({
             <div className="main-section-text-wrapper">
               <div className="main-section-heading">
                 <h1>{headlineUpper}</h1>
-                <Typewriter
-                  options={{
-                    strings: headlineMiddle,
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
+                <AnimatedTitle strings={headlineMiddle} />
                 <h1>{headlineFooter}</h1>
               </div>
               <p className="main-section-subtitle">{description}</p>

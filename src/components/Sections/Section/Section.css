@@ -1,7 +1,7 @@
 .section-container {
   /* background-color: var(--secondary); */
   color: #fff;
-  padding: 3rem 0;
+  padding: 1rem 0 3rem 0;
 }
 
 .section-row {
@@ -9,7 +9,7 @@
   flex-direction: row;
 }
 
-.img-start{
+.img-start {
   flex-direction: row-reverse;
 }
 
@@ -45,6 +45,24 @@
   align-content: center;
 }
 
+.section-text-wrapper.text-only {
+  max-width: none;
+  align-items:flex-start;
+}
+
+.additional-description-text-wrapper {
+  max-width: 100%;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
 .top-line {
   color: var(--top-line-color);
   font-size: 16px;
@@ -56,8 +74,17 @@
 }
 
 .heading {
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #f7f8fa;
+}
+
+.sub-heading {
+  /* align-self: start; */
+  margin-bottom: 24px;
+  font-size: 32px;
   line-height: 1.1;
   font-weight: 600;
   color: #f7f8fa;
@@ -67,8 +94,20 @@
   color: var(--dark-color)
 }
 
-.section-subtitle {
+.section-text-wrapper p , .section-text-wrapper ul {
   max-width: 440px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--dark-color)
+}
+
+.section-text-wrapper.text-only p{
+  max-width: none;
+}
+
+.additional-description-subtitle {
+  align-self: flex-start;
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
@@ -95,10 +134,14 @@ img {
 
 
 @media screen and (max-width: 768px) {
+  .section-container {
+    padding: 1rem 0 1rem 0;
+  }
+
   .general-container-light:after {
     width: calc(185% + 1.3px);
   }
-  
+
   .section-text-wrapper {
     padding-bottom: 24px;
   }
@@ -108,19 +151,31 @@ img {
     flex-basis: 100%;
   }
 
-  .home__hero-section{
+  .home__hero-section {
     padding: 24px 0;
   }
 
-  .heading{
+  .heading {
     font-size: 32px;
+    text-align: center;
   }
 
-  .section-subtitle{
+  .sub-heading {
+    font-size: 24px;
+  }
+
+  .section-text-wrapper p , .section-text-wrapper ul {
+    font-size: 16px;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+  }
+
+  .additional-description-subtitle {
     font-size: 16px;
   }
 
-  .home__hero-row{
+
+  .home__hero-row {
     display: flex;
     flex-direction: column-reverse;
   }
