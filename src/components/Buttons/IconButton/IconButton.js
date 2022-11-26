@@ -8,7 +8,9 @@ export const IconButton = ({
     onClick,
     icon,
     link,
-    route
+    route,
+    dataAos,
+    dataAosDelay
 }) => {
     const navigate = useNavigate();
     const handleOnClick = useCallback(() => navigate(route, { replace: true }), [navigate]);
@@ -24,7 +26,9 @@ export const IconButton = ({
     }
 
     return (
-        <div className='btn-wrapper'>
+        <div data-aos={dataAos}
+            data-aos-delay={dataAosDelay}
+            className='btn-wrapper'>
             <button
                 className={`icon-btn ${buttonStyle} `}
                 onClick={handleButtonClick}

@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import "./MainSection.css";
-import { Button } from "../../Buttons/Button/Button";
-import { Link } from "react-router-dom";
 import { IconButton } from "../../Buttons/IconButton/IconButton";
 import AnimatedTitle from "../../AnimatedTitle/AnimatedTitle";
 
@@ -21,6 +19,15 @@ function MainSection({
   route
 }) {
 
+  const [stringIndex, setStringIndex] = useState(0)
+
+  // useEffect(() => {
+  //   const stringInterval = setInterval(() => {
+  //     setStringIndex(index => index === headlineMiddle.length - 1 ? 0 : index + 1)
+  //   }, 2000)
+  //   return () => { clearInterval(stringInterval) }
+  // }, [])
+
   return (
     <>
       <div className="main-section">
@@ -29,7 +36,9 @@ function MainSection({
             <div className="main-section-text-wrapper">
               <div className="main-section-heading">
                 <h1>{headlineUpper}</h1>
-                <AnimatedTitle strings={headlineMiddle} />
+                <AnimatedTitle strings={headlineMiddle}
+                  stringIndex={stringIndex}
+                  setStringIndex={setStringIndex} />
                 <h1>{headlineFooter}</h1>
               </div>
               <p className="main-section-subtitle">{description}</p>

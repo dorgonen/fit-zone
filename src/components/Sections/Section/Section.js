@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Section.css';
 import { Button } from '../../Buttons/Button/Button';
 import RoundButton from '../../Buttons/RoundButton/RoundButton';
 import { Link } from 'react-router-dom';
 import { IconButton } from '../../Buttons/IconButton/IconButton';
 import ReactPlayer from "react-player"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Section({
   isMobile,
@@ -30,6 +32,10 @@ function Section({
     setIsExpandedArray(newArray)
   }
 
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <>
       <div className={`section-container ${lightBg ? "lightBg" : "darkBg"}`}>
@@ -38,7 +44,10 @@ function Section({
             className={`row section-row ${imgStart ? 'img-start' : ''}`}
           >
             <div className='col'>
-              <div className='section-text-wrapper'>
+              <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                className='section-text-wrapper'>
                 <div className='top-line'>{topLine}</div>
                 <h1 className={`heading ${lightText ? "" : "dark"}`}>
                   {headline}
@@ -52,7 +61,7 @@ function Section({
                   }
                 </p>
                 {buttonLabel &&
-                  <IconButton buttonSize='btn--wide' route={route} >
+                  <IconButton dataAos="zoom-in" dataAosDelay={800} buttonSize='btn--wide' route={route} >
                     {buttonLabel}
                   </IconButton>
                 }

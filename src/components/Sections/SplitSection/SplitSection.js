@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SplitSection.css';
 import { Button } from '../../Buttons/Button/Button';
 import RoundButton from '../../Buttons/RoundButton/RoundButton';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function SplitSection({
   items,
@@ -10,6 +12,10 @@ function SplitSection({
   description,
   lightBgColor
 }) {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   const itemsCnt = items.length;
   const itemPercent = itemsCnt > 0 ? (1 / itemsCnt) * 100 : 0;
@@ -29,15 +35,19 @@ function SplitSection({
           <h1 className='heading dark'>
             {headline}
           </h1>
-          {description && 
-          <h5 className='heading-third dark'>
-            {description}
-          </h5>
+          {description &&
+            <h5 className='heading-third dark'>
+              {description}
+            </h5>
           }
           <div className='split-section-row'>
             {items.map((item, index) => {
               return (
-                <div key={index} className="split-section-col" style={window.innerWidth <= 960 ? {} : { flex: `0 0 ${itemPercent}%`, maxWidth: `${itemPercent}%` }}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="center-bottom"
+                  data-aos-delay={400 * index}
+                  key={index} className="split-section-col" style={window.innerWidth <= 960 ? {} : { flex: `0 0 ${itemPercent}%`, maxWidth: `${itemPercent}%` }}>
                   {item.img &&
                     <div className='split-section-img-wrapper'>
                       <img src={item.img} alt={item.alt} className='split-section-img' />

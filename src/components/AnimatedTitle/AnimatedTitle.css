@@ -1,3 +1,6 @@
-.title{
-    color: rgb(98, 98, 98)
+.animated-title{
+    color: rgb(98, 98, 98);
+    overflow: hidden;
+    width: 100%;
+
 }
